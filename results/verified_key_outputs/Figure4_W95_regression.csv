@@ -1,0 +1,2 @@
+model_type,intercept,slope_W95,p_W95,Rsquared_ordinary,N
+linear regression: Diff_MAD ~ mean_width95_deg,-0.402522672409105,0.0703448964418346,1.43452146083586e-07,0.28788375307415,84

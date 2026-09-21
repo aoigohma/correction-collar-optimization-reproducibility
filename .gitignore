@@ -1,0 +1,20 @@
+# MATLAB temporary files
+*.asv
+*.autosave
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Locally reproduced outputs can be regenerated
+results/reproduced/
+
+# Raw microscopy data are not intended for this repository
+*.oir
+*.tif
+*.tiff
+
+# Generated panel artwork can be regenerated
+results/figure_panels/

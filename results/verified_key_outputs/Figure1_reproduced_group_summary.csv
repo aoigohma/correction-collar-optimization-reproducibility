@@ -1,0 +1,13 @@
+metric,description,unit,n,median,q25,q75,min,max,mean,sd
+theta_range_deg,Temporal range of operational thetaopt,degree,7,4,3.06,4.545,1.98,5.78,3.88285714285714,1.22987417087704
+max_abs_deviation_from_initial_deg,Maximum absolute deviation from initial thetaopt,degree,7,2.82,2.42,3.505,1.18,3.98,2.81142857142857,0.917013787090623
+theta_MAD_deg,Temporal MAD of operational thetaopt,degree,7,0.660000000000002,0.562499999999999,0.730000000000001,0.280000000000001,0.779999999999998,0.61,0.167132681822955
+mean_W95_deg,Mean W95,degree,7,10.6433333333333,9.28316666666667,11.7755,8.43,13.3026666666667,10.6773333333333,1.69076892435234
+fraction_initial_fit_outside_W95,Fraction initial fitted angle outside W95,fraction,7,0,0,0,0,0,0,0
+mean_relative_fitted_score_initial,Mean relative fitted score at initial angle,ratio,7,0.995583308741976,0.9931428957576,0.998493987103995,0.981217093032637,0.999439819131122,0.994161237484415,0.00620744181812828
+minimum_relative_fitted_score_initial,Minimum relative fitted score at initial angle,ratio,7,0.985779949416527,0.97219260137485,0.991589464651145,0.95328392140632,0.997343030159768,0.980826916413021,0.0153390097079496
+max_relative_fitted_score_reduction_percent,Maximum relative fitted-score reduction (%),percent,7,1.42200505834726,0.841053534885539,2.78073986251503,0.2656969840232,4.67160785936802,1.91730835869795,1.53390097079496
+fraction_relative_fitted_score_below0p95,Fraction relative fitted score below 0.95,fraction,7,0,0,0,0,0,0,0
+valid_fit_rate,Valid fit rate,fraction,7,1,1,1,1,1,1,0
+boundary_hit_rate,Boundary-hit rate,fraction,7,0,0,0,0,0,0,0
+mean_R2,Mean R2,R2,7,0.968208726076994,0.952752651383267,0.981408590396083,0.931602380390267,0.985351174529772,0.964230463734823,0.0192083337192061

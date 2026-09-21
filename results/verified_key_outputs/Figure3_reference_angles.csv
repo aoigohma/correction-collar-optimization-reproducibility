@@ -1,0 +1,8 @@
+experiment_id,source_file,reference_condition,reference_isoflurane_label,reference_depth_um,theta_ref_deg,reference_measurement_index,reference_actual_time_idx,reference_R2,reference_boundary_hit,theta_ref_method
+20221201_data1,20221201_data1_Anesthesia_PeakF_CC_data_4cond.mat,Ane1,1%,200,0.140000000000001,1,31,0.97343558689244,0,first_valid_fitted_optimum
+20221208_data2,20221208_data2_Anesthesia_PeakF_CC_data_4cond.mat,Ane1,1%,200,3.74,1,31,0.987721894927867,0,first_valid_fitted_optimum
+20221215_data2,20221215_data2_Anesthesia_PeakF_CC_data_4cond.mat,Ane1,1%,200,4.02,1,31,0.973813214946315,0,first_valid_fitted_optimum
+20221220_data2,20221220_data2_Anesthesia_PeakF_CC_data_4cond.mat,Ane1,1%,200,4.94,1,31,0.981946492315589,0,first_valid_fitted_optimum
+20231207_data1,20231207_data1_Anesthesia_PeakF_CC_data_4cond.mat,Ane1,1%,200,-24.06,1,31,0.960900795259718,0,first_valid_fitted_optimum
+20231215_data1,20231215_data1_Anesthesia_PeakF_CC_data_4cond.mat,Ane1,1%,200,-24.84,1,31,0.979532403379746,0,first_valid_fitted_optimum
+20231220_data1,20231220_data1_Anesthesia_PeakF_CC_data_4cond.mat,Ane1,1%,200,-17.12,1,31,0.977057178032915,0,first_valid_fitted_optimum

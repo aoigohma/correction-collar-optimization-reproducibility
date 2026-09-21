@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: >-
+  If you use this repository, please cite the archived software/data release.
+  Once the associated article has been published, please also cite the article.
+type: software
+title: "Reproducibility package for image-based correction-collar optimization over time in in vivo two-photon microscopy"
+authors:
+  - family-names: "Gohma"
+    given-names: "Aoi"
+  - family-names: "Ue"
+    given-names: "Yoshihiro"
+  - family-names: "Miyawaki"
+    given-names: "Atsushi"
+  - family-names: "Monai"
+    given-names: "Hiromu"
+version: "0.3.0-draft"
+license: MIT
+keywords:
+  - two-photon microscopy
+  - correction collar
+  - spherical aberration
+  - in vivo imaging
+  - reproducibility
+  - MATLAB
+references:
+  - type: unpublished
+    title: "Image-Based Correction-Collar Optimization over Time in In Vivo Two-Photon Microscopy"
+    authors:
+      - family-names: "Gohma"
+        given-names: "Aoi"
+      - family-names: "Ue"
+        given-names: "Yoshihiro"
+      - family-names: "Miyawaki"
+        given-names: "Atsushi"
+      - family-names: "Monai"
+        given-names: "Hiromu"

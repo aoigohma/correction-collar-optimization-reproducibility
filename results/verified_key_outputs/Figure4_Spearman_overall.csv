@@ -1,0 +1,5 @@
+metric,group_type,group_label,depth_um,condition,N,Spearman_rho,P_Value,Q_Value_BH_within_metric_group
+mean_width95_deg,overall,all,NaN,,84,0.545525429815488,8.04353529255815e-08,8.04353529255815e-08
+mean_R2,overall,all,NaN,,84,-0.457492054654173,1.21361675593884e-05,1.21361675593884e-05
+valid_fit_rate,overall,all,NaN,,84,-0.244756075336833,0.024841386923328,0.024841386923328
+boundary_hit_rate,overall,all,NaN,,84,0.34612076305254,0.00125965200649428,0.00125965200649428

@@ -1,0 +1,2 @@
+N_mouse_condition_pairs,N_positive_slope,N_nonpositive_slope,Median_slope_deg_per_um,Q25_slope_deg_per_um,Q75_slope_deg_per_um,N_mice,N_mice_positive_median_slope,Median_mousewise_slope_deg_per_um,SlopeZeroTolerance
+28,26,2,0.00340000000000002,0.00209999999999996,0.00489999999999999,7,7,0.0033,1e-12
