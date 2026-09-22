@@ -1,5 +1,7 @@
 # Reproducibility package for image-based correction-collar optimization over time in in vivo two-photon microscopy
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22885339.svg)](https://doi.org/10.5281/zenodo.22885339)
+
 This repository contains the compact analysis-ready datasets, MATLAB code, released source-data workbooks, verified reference outputs, and figure-panel generation scripts associated with the manuscript:
 
 **Gohma A, Ue Y, Miyawaki A, Monai H. _Image-Based Correction-Collar Optimization over Time in In Vivo Two-Photon Microscopy._**
@@ -285,9 +287,13 @@ See `docs/VALIDATION_STATUS.md` for details.
 
 A machine-readable citation file is provided as `CITATION.cff`. The development repository is `https://github.com/aoigohma/correction-collar-optimization-reproducibility`.
 
-For the first public release, cite the archived repository release using the Zenodo DOI assigned to version 1.0.0. Once the associated article is published, please cite both the article and the archived repository release when the code or deposited data materially contribute to the work.
+For the first public release, cite the archived Zenodo record for version 1.0.0:
 
-The `CITATION.cff` file records the GitHub repository URL, version 1.0.0, and release date. After Zenodo assigns a DOI, add the DOI to the repository metadata. After the article is published, add the article as `preferred-citation`.
+> Gohma, A., Ue, Y., Miyawaki, A., & Monai, H. (2026). *Reproducibility package for image-based correction-collar optimization over time in in vivo two-photon microscopy* (Version v1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.22885339
+
+The version-specific DOI **10.5281/zenodo.22885339** identifies the archived v1.0.0 release used for this manuscript. Zenodo also provides the concept DOI **10.5281/zenodo.22885338** for citing all versions collectively. Once the associated article is published, please cite both the article and the archived repository release when the code or deposited data materially contribute to the work.
+
+The `CITATION.cff` file records the GitHub repository URL, version 1.0.0, release date, and version-specific Zenodo DOI. After the article is published, add the article as `preferred-citation`.
 
 ## License
 
@@ -300,7 +306,7 @@ Third-party software such as MATLAB is not redistributed or licensed by this rep
 
 ## Data and code availability
 
-The manuscript-ready wording is maintained in `docs/DATA_CODE_AVAILABILITY.md` so that the final Zenodo DOI and GitHub URL can be inserted without changing the scientific description of the deposited materials.
+The manuscript-ready wording is maintained in `docs/DATA_CODE_AVAILABILITY.md`. It contains the version-specific Zenodo DOI for the archived v1.0.0 release and the public GitHub repository URL.
 
 ## MATLAB path troubleshooting
 
@@ -333,4 +339,14 @@ https://github.com/aoigohma/correction-collar-optimization-reproducibility
 
 Release version: `v1.0.0`
 
-The Zenodo DOI will be added after the GitHub v1.0.0 release has been archived by Zenodo.
+Version-specific Zenodo DOI:
+
+```text
+https://doi.org/10.5281/zenodo.22885339
+```
+
+Zenodo concept DOI for all versions:
+
+```text
+https://doi.org/10.5281/zenodo.22885338
+```

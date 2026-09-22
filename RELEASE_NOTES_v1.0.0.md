@@ -18,4 +18,4 @@ This release includes:
 
 The compact repository does not contain the original OIR acquisition files or the representative raw fluorescence-image assets used in Figure 1C. TIFF-converted images used for image analysis are available from the corresponding author upon reasonable request.
 
-The Zenodo DOI for this release will be added to the repository metadata after archiving.
+Archived Zenodo record for this release: https://doi.org/10.5281/zenodo.22885339.

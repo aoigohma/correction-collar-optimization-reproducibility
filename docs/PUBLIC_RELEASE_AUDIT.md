@@ -24,7 +24,7 @@ The v1.0.0 replacement files set:
 - `CITATION.cff` version to `1.0.0`;
 - `CITATION.cff` release date to `2026-09-22`;
 - retain the confirmed GitHub repository URL; and
-- intentionally leave the Zenodo DOI absent until Zenodo archives the GitHub release.
+- initially left the Zenodo DOI absent until Zenodo archived the GitHub release.
 
 If the actual public release date differs from 2026-09-22, update `date-released` in `CITATION.cff` and the version/date sentence in `README.md` before the GitHub release is created.
 
@@ -37,3 +37,15 @@ If the actual public release date differs from 2026-09-22, update `date-released
 5. Change repository visibility to Public.
 6. In Zenodo, run `Sync now`, enable the repository, and only then create the GitHub `v1.0.0` release.
 7. Confirm DOI assignment and update README/CITATION/manuscript metadata afterward.
+
+
+## Post-archive DOI finalization
+
+The GitHub `v1.0.0` release was archived successfully by Zenodo on 2026-09-22.
+
+- Version-specific DOI: `10.5281/zenodo.22885339`
+- Concept DOI for all versions: `10.5281/zenodo.22885338`
+
+The version-specific DOI is used in `README.md`, `CITATION.cff`, and the manuscript Data and code availability statement so that the exact archived release supporting the manuscript can be identified.
+
+These DOI-finalization changes update the GitHub `main` branch after the immutable v1.0.0 archive was created; they do not alter the contents of the already archived Zenodo v1.0.0 snapshot.

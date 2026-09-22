@@ -48,18 +48,18 @@ This checklist is for the first public GitHub/Zenodo release.
 - [x] `CITATION.cff` contains the GitHub repository URL.
 - [x] `CITATION.cff` contains `date-released: 2026-09-22`.
 - [ ] If the actual public release date differs from 2026-09-22, update `date-released` and the README before creating the release.
-- [ ] Commit and push the v1.0.0 preparation changes while the repository is still private.
-- [ ] Change the GitHub repository visibility from Private to Public.
-- [ ] In Zenodo, run `Sync now`, enable `correction-collar-optimization-reproducibility`, and confirm the repository is enabled for archiving.
-- [ ] On GitHub, create the `v1.0.0` release/tag only **after** Zenodo integration is enabled.
-- [ ] Confirm that Zenodo archives the release and assigns a DOI.
+- [x] Commit and push the v1.0.0 preparation changes while the repository is still private.
+- [x] Change the GitHub repository visibility from Private to Public.
+- [x] In Zenodo, run `Sync now`, enable `correction-collar-optimization-reproducibility`, and confirm the repository is enabled for archiving.
+- [x] On GitHub, create the `v1.0.0` release/tag only **after** Zenodo integration is enabled.
+- [x] Confirm that Zenodo archives the release and assigns DOI `10.5281/zenodo.22885339`.
 
 ## After Zenodo assigns the DOI
 
-- [ ] Add the Zenodo DOI to `README.md`.
-- [ ] Add the Zenodo DOI to `CITATION.cff`.
-- [ ] Insert the Zenodo DOI into `docs/DATA_CODE_AVAILABILITY.md` and the manuscript.
-- [ ] Commit/push these metadata-only updates.
+- [x] Add the Zenodo DOI to `README.md`.
+- [x] Add the Zenodo DOI to `CITATION.cff`.
+- [x] Insert the Zenodo DOI into `docs/DATA_CODE_AVAILABILITY.md`; insert the same DOI into the manuscript before submission.
+- [ ] Commit/push these DOI-finalization metadata updates.
 - [ ] If desired, create a small metadata-only patch release only when necessary; the archived v1.0.0 record itself remains the immutable first release.
 
 ## After article acceptance/publication
