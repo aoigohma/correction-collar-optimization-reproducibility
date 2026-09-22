@@ -43,9 +43,7 @@ function build_Figure1_analysis_ready(inputDir, outputDir, varargin)
 %     R^2, retention, etc.) are deliberately NOT copied into F1.
 %
 % Example
-%   build_Figure1_analysis_ready( ...
-%       'D:\project\processed\healthy', ...
-%       'D:\project\public_release\data\analysis_ready');
+%   build_Figure1_analysis_ready(inputDir, outputDir);
 %
 % Manuscript analysis conventions encoded as metadata only:
 %   cubic polynomial order = 3

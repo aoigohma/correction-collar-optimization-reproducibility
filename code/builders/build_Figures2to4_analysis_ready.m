@@ -47,9 +47,7 @@ function build_Figures2to4_analysis_ready(inputDir, outputDir, varargin)
 % explicit for DiffMAD and consecutive-run analyses.
 %
 % Example
-%   build_Figures2to4_analysis_ready( ...
-%       'D:\project\processed\anesthesia', ...
-%       'D:\project\public_release\data\analysis_ready');
+%   build_Figures2to4_analysis_ready(inputDir, outputDir);
 %
 % -------------------------------------------------------------------------
 

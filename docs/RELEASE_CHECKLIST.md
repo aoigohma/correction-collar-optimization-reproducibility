@@ -47,6 +47,7 @@ Before public deposition / GitHub v1.0.0 release:
 
 ## Final repository hygiene
 
-- [ ] Search the repository for unresolved placeholders such as `[ZENODO DOI]`, `[GITHUB REPOSITORY URL]`, `TODO`, and obsolete local Windows paths.
+- [ ] Search the repository for unresolved placeholders such as `[ZENODO DOI]`, `TODO`, and obsolete local Windows paths.
+- [ ] Confirm that released `.xlsx` files do not retain local-folder metadata such as Excel `x15ac:absPath`.
 - [ ] Confirm that no private/raw acquisition files, credentials, personal information, or unrelated laboratory files are included.
-- [ ] Recompute `MANIFEST_SHA256.txt` after all final changes.
+- [ ] Run `update_manifest_sha256` after all final changes and confirm that `MANIFEST_SHA256.txt` includes the released analysis-ready MAT files.

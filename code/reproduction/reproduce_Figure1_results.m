@@ -60,9 +60,7 @@ function reproduce_Figure1_results(datasetPath, outputDir, varargin)
 % numerical reproduction because they require the original TIFF images.
 %
 % Example
-%   reproduce_Figure1_results( ...
-%       'D:\public_release\data\analysis_ready\Figure1_analysis_ready.mat', ...
-%       'D:\public_release\results_expected\Figure1');
+%   reproduce_Figure1_results(datasetPath, outputDir);
 %
 % -------------------------------------------------------------------------
 

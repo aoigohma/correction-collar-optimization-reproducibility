@@ -74,9 +74,7 @@ function reproduce_Figure3_results(datasetPath, outputDir, varargin)
 %   8) Figure 3 analyses are descriptive; no hypothesis tests are run.
 %
 % Example
-%   reproduce_Figure3_results( ...
-%       'D:\public_release\data\analysis_ready\Figures2to4_analysis_ready.mat', ...
-%       'D:\public_release\results_expected\Figure3');
+%   reproduce_Figure3_results(datasetPath, outputDir);
 %
 % -------------------------------------------------------------------------
 

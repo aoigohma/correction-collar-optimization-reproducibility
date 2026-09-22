@@ -80,9 +80,7 @@ function reproduce_Figure4_results(datasetPath, outputDir, varargin)
 %     as positive. This reproduces the 26/28 positive-slope summary.
 %
 % Example
-%   reproduce_Figure4_results( ...
-%       'D:\public_release\data\analysis_ready\Figures2to4_analysis_ready.mat', ...
-%       'D:\public_release\reproduced_results\Figure4');
+%   reproduce_Figure4_results(datasetPath, outputDir);
 %
 % -------------------------------------------------------------------------
 

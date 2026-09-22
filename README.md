@@ -267,9 +267,9 @@ Public-facing derived-variable terminology follows the manuscript, including:
 
 ## Raw images and acquisition files
 
-The compact reproduction package does not require the original TIFF or OIR files for any reported numerical analysis. The original OIR acquisition files are not included.
+The compact reproduction package does not require the original TIFF or OIR files for any reported numerical analysis. The TIFF-converted images used for image analysis are available from the corresponding author upon reasonable request. The original OIR acquisition files are no longer available.
 
-Figure 1C requires representative fluorescence images. The released source-data workbook records the exact experiment, time points, and collar angles used for that panel, but the image assets themselves are not included in the compact repository.
+Figure 1C requires representative fluorescence images. The released source-data workbook records the exact experiment, time points, and collar angles used for that panel, but the representative raw fluorescence-image assets themselves are not included in the compact repository.
 
 ## Validation status
 
@@ -281,7 +281,7 @@ See `docs/VALIDATION_STATUS.md` for details.
 
 ## Citation
 
-A machine-readable citation file is provided as `CITATION.cff`.
+A machine-readable citation file is provided as `CITATION.cff`. The development repository is `https://github.com/aoigohma/correction-collar-optimization-reproducibility`.
 
 Until a peer-reviewed article DOI is available, cite the archived repository release (for example, the Zenodo DOI assigned to version 1.0.0). Once the associated article is published, please cite both the article and the archived repository release when the code or deposited data materially contribute to the work.
 

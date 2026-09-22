@@ -60,9 +60,7 @@ function reproduce_Figure2_results(datasetPath, outputDir, varargin)
 % final manuscript and source-data tables.
 %
 % Example
-%   reproduce_Figure2_results( ...
-%       'D:\public_release\data\analysis_ready\Figures2to4_analysis_ready.mat', ...
-%       'D:\public_release\reproduced_results\Figure2');
+%   reproduce_Figure2_results(datasetPath, outputDir);
 %
 % -------------------------------------------------------------------------
 

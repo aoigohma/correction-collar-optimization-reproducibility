@@ -13,8 +13,9 @@ authors:
     given-names: "Atsushi"
   - family-names: "Monai"
     given-names: "Hiromu"
-version: "0.3.0-draft"
+version: "0.3.1-draft"
 license: MIT
+repository-code: "https://github.com/aoigohma/correction-collar-optimization-reproducibility"
 keywords:
   - two-photon microscopy
   - correction collar
