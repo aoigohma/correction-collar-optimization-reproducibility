@@ -1,11 +1,11 @@
-# Pre-release checklist
+# v1.0.0 public-release checklist
 
-Before public deposition / GitHub v1.0.0 release:
+This checklist is for the first public GitHub/Zenodo release.
 
 ## Data and numerical reproduction
 
-- [ ] Add `Figure1_analysis_ready.mat` to `data/analysis_ready/`.
-- [ ] Add `Figures2to4_analysis_ready.mat` to `data/analysis_ready/`.
+- [ ] Confirm `Figure1_analysis_ready.mat` is present in `data/analysis_ready/`.
+- [ ] Confirm `Figures2to4_analysis_ready.mat` is present in `data/analysis_ready/`.
 - [ ] Confirm metadata CSVs correspond exactly to the released MAT files.
 - [ ] Run `setup_repository`.
 - [ ] Run `run_all_reproductions`.
@@ -25,29 +25,45 @@ Before public deposition / GitHub v1.0.0 release:
 - [ ] Confirm Supplementary Figures S1–S6 export successfully.
 - [ ] Confirm Figure 3D/G and Supplementary Figure S4 event-frequency panels use mouse-level **fractions**, not percent-scaled values.
 - [ ] Visually compare generated panels with the manuscript figures for axes, group ordering, representative experiment, thresholds, and legends.
-- [ ] Keep final Illustrator-only composition/schematic work documented in `docs/FIGURE_GENERATION.md`.
 
 ## Licensing and attribution
 
-- [ ] Confirm with the study authors/institution that the repository rightsholders are authorized to release the source-data workbooks and deposited research materials under CC BY 4.0.
-- [ ] Confirm that the software can be released under the MIT License.
-- [ ] Confirm the author list/order used in `CITATION.cff` with the coauthors.
+- [ ] Confirm with the study authors/institution that the deposited research materials can be released under CC BY 4.0.
+- [ ] Confirm that the MATLAB source code can be released under the MIT License.
+- [ ] Confirm the author list/order in `CITATION.cff` with the coauthors.
 - [ ] Confirm no third-party material requiring a different license is included.
 
-## GitHub / Zenodo metadata
+## Repository hygiene
 
-- [ ] Change `VERSION` to `v1.0.0` immediately before the first public release.
-- [ ] Change the `version` field in `CITATION.cff` to `1.0.0`.
-- [ ] Add the public GitHub URL to `CITATION.cff` as `repository-code`.
-- [ ] Add the public release date to `CITATION.cff` as `date-released`.
-- [ ] Create the GitHub `v1.0.0` release after enabling Zenodo integration.
-- [ ] Add the resulting Zenodo DOI to `CITATION.cff` and `README.md` (or include it in the next metadata-only patch release if the DOI is assigned after the release is archived).
-- [ ] Insert the final Zenodo DOI and GitHub URL into `docs/DATA_CODE_AVAILABILITY.md` and the manuscript.
-- [ ] After the article receives its DOI, add the article to `CITATION.cff` as `preferred-citation`, and add the article DOI/journal metadata to README/Zenodo.
+- [ ] Confirm the six released `.xlsx` files were cleaned with Excel Document Inspector and no unnecessary local-folder metadata remains.
+- [ ] Confirm there are no credentials, personal information, private/raw acquisition files, or unrelated laboratory files.
+- [ ] Search for obsolete local Windows paths and unresolved placeholders other than the intentionally pending Zenodo DOI.
+- [ ] Run `update_manifest_sha256` after all final changes.
+- [ ] Confirm `MANIFEST_SHA256.txt` includes both released analysis-ready MAT files and the cleaned workbooks.
 
-## Final repository hygiene
+## v1.0.0 metadata
 
-- [ ] Search the repository for unresolved placeholders such as `[ZENODO DOI]`, `TODO`, and obsolete local Windows paths.
-- [ ] Confirm that released `.xlsx` files do not retain local-folder metadata such as Excel `x15ac:absPath`.
-- [ ] Confirm that no private/raw acquisition files, credentials, personal information, or unrelated laboratory files are included.
-- [ ] Run `update_manifest_sha256` after all final changes and confirm that `MANIFEST_SHA256.txt` includes the released analysis-ready MAT files.
+- [x] `VERSION` is `v1.0.0`.
+- [x] `CITATION.cff` version is `1.0.0`.
+- [x] `CITATION.cff` contains the GitHub repository URL.
+- [x] `CITATION.cff` contains `date-released: 2026-09-22`.
+- [ ] If the actual public release date differs from 2026-09-22, update `date-released` and the README before creating the release.
+- [ ] Commit and push the v1.0.0 preparation changes while the repository is still private.
+- [ ] Change the GitHub repository visibility from Private to Public.
+- [ ] In Zenodo, run `Sync now`, enable `correction-collar-optimization-reproducibility`, and confirm the repository is enabled for archiving.
+- [ ] On GitHub, create the `v1.0.0` release/tag only **after** Zenodo integration is enabled.
+- [ ] Confirm that Zenodo archives the release and assigns a DOI.
+
+## After Zenodo assigns the DOI
+
+- [ ] Add the Zenodo DOI to `README.md`.
+- [ ] Add the Zenodo DOI to `CITATION.cff`.
+- [ ] Insert the Zenodo DOI into `docs/DATA_CODE_AVAILABILITY.md` and the manuscript.
+- [ ] Commit/push these metadata-only updates.
+- [ ] If desired, create a small metadata-only patch release only when necessary; the archived v1.0.0 record itself remains the immutable first release.
+
+## After article acceptance/publication
+
+- [ ] Add the article as `preferred-citation` in `CITATION.cff`.
+- [ ] Add the final article citation and DOI to `README.md`.
+- [ ] Add the article DOI as a related identifier in Zenodo.

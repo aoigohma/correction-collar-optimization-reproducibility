@@ -10,9 +10,9 @@
 
 > **Data and code availability.** Analysis-ready datasets, source data underlying the figures and supplementary tables, and MATLAB code for numerical reproduction and data-panel generation are publicly available at Zenodo (DOI: **[ZENODO DOI]**). The development repository is available at **https://github.com/aoigohma/correction-collar-optimization-reproducibility**. TIFF-converted images used for image analysis are available from the corresponding author upon reasonable request; original OIR acquisition files are no longer available.
 
-## Temporary wording before a DOI has been assigned
+## Temporary wording until the Zenodo DOI has been assigned
 
-> **Data and code availability.** Analysis-ready datasets, source-data workbooks underlying the figures and supplementary tables, mouse-level data used in the reported analyses, MATLAB code used to reproduce the numerical analyses, and scripts used to regenerate the data-driven figure panels will be deposited in a public Zenodo record. The development repository is available at **https://github.com/aoigohma/correction-collar-optimization-reproducibility**. The Zenodo DOI will be added before publication.
+> **Data and code availability.** Analysis-ready datasets, source-data workbooks underlying the figures and supplementary tables, mouse-level data used in the reported analyses, MATLAB code used to reproduce the numerical analyses, and scripts used to regenerate the data-driven figure panels are prepared for public deposition. The development repository is available at **https://github.com/aoigohma/correction-collar-optimization-reproducibility**. The Zenodo DOI will be inserted after the v1.0.0 release has been archived.
 
 ## After the article receives a DOI
 

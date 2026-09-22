@@ -4,6 +4,8 @@ This repository contains the compact analysis-ready datasets, MATLAB code, relea
 
 **Gohma A, Ue Y, Miyawaki A, Monai H. _Image-Based Correction-Collar Optimization over Time in In Vivo Two-Photon Microscopy._**
 
+Public repository release: **v1.0.0** (2026-09-22).
+
 The numerical workflow starts from **normalized measured image-score profiles at the sampled correction-collar angles** and recalculates the principal derived quantities and statistical results. It does not use previously calculated θopt, W95, relative fitted score, DiffMAD, or mixed-model outputs as numerical inputs.
 
 ## What this repository reproduces
@@ -283,9 +285,9 @@ See `docs/VALIDATION_STATUS.md` for details.
 
 A machine-readable citation file is provided as `CITATION.cff`. The development repository is `https://github.com/aoigohma/correction-collar-optimization-reproducibility`.
 
-Until a peer-reviewed article DOI is available, cite the archived repository release (for example, the Zenodo DOI assigned to version 1.0.0). Once the associated article is published, please cite both the article and the archived repository release when the code or deposited data materially contribute to the work.
+For the first public release, cite the archived repository release using the Zenodo DOI assigned to version 1.0.0. Once the associated article is published, please cite both the article and the archived repository release when the code or deposited data materially contribute to the work.
 
-The `CITATION.cff` file should be updated with the final repository DOI, GitHub URL, release date, and article `preferred-citation` after publication metadata become available.
+The `CITATION.cff` file records the GitHub repository URL, version 1.0.0, and release date. After Zenodo assigns a DOI, add the DOI to the repository metadata. After the article is published, add the article as `preferred-citation`.
 
 ## License
 
@@ -323,8 +325,12 @@ which ccrepro.get_param -all
 
 ## Persistent identifiers
 
-The public GitHub repository URL and Zenodo DOI will be added at release. The intended public repository name is:
+GitHub repository:
 
 ```text
-correction-collar-optimization-reproducibility
+https://github.com/aoigohma/correction-collar-optimization-reproducibility
 ```
+
+Release version: `v1.0.0`
+
+The Zenodo DOI will be added after the GitHub v1.0.0 release has been archived by Zenodo.
