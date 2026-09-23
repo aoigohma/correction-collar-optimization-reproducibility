@@ -1,12 +1,14 @@
 # Reproducibility package for image-based correction-collar optimization over time in in vivo two-photon microscopy
 
-Historical v1.0.0 archive: [10.5281/zenodo.22885339](https://doi.org/10.5281/zenodo.22885339). **This archived version includes exploratory LME analysis and is not the current no-LME manuscript release.** The updated no-LME v1.0.1 archive will receive its own DOI after release.
+[![Zenodo v1.0.1 DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22913943.svg)](https://doi.org/10.5281/zenodo.22913943)
+
+**Current no-LME manuscript release: [v1.0.1](https://doi.org/10.5281/zenodo.22913943) (DOI: `10.5281/zenodo.22913943`).** Historical [v1.0.0](https://doi.org/10.5281/zenodo.22885339) includes exploratory LME materials and is not the current manuscript release.
 
 This repository contains the compact analysis-ready datasets, MATLAB code, released source-data workbooks, verified reference outputs, and figure-panel generation scripts associated with the manuscript:
 
 **Gohma A, Ue Y, Miyawaki A, Monai H. _Image-Based Correction-Collar Optimization over Time in In Vivo Two-Photon Microscopy._**
 
-Current manuscript scope: **v1.0.1 (no LME; release preparation)**. The earlier v1.0.0 release remains available solely as a historical record.
+Current manuscript scope: **v1.0.1 (no LME; published 2026-09-23)**. The earlier v1.0.0 release remains available as a historical record.
 
 The numerical workflow starts from **normalized measured image-score profiles at the sampled correction-collar angles** and recalculates the principal derived quantities and statistical results. It does not use previously calculated θopt, W95, relative fitted score, or DiffMAD as numerical inputs.
 
@@ -130,7 +132,7 @@ results/reproduced/Figure4
 validate_against_verified
 ```
 
-The previous v1.0.0 workflow produced **15/15 PASS** for its then-selected reference outputs, including two historical LME files. The **current no-LME validation covers 13 selected comparisons**. Run `run_all_reproductions` followed by `validate_against_verified` in this release; record the new result in `docs/VALIDATION_STATUS.md` only after checking MATLAB output.
+The previous v1.0.0 workflow produced **15/15 PASS** for its then-selected reference outputs, including two historical LME files. The **current no-LME workflow passed all 13 selected comparisons** in MATLAB on 2026-09-23. Run `run_all_reproductions` followed by `validate_against_verified` to verify the current manuscript scope locally; historical LME is excluded by default.
 
 ## Generate figure panels
 
@@ -286,13 +288,13 @@ See `docs/VALIDATION_STATUS.md` for details.
 
 ## Citation
 
-`CITATION.cff` identifies the current no-LME version (v1.0.1). Its version-specific Zenodo DOI will be added **after** the v1.0.1 GitHub release is archived. Until then, do not cite the older v1.0.0 DOI as the archive for the final manuscript.
+`CITATION.cff` identifies the current no-LME version **v1.0.1**, archived at **[10.5281/zenodo.22913943](https://doi.org/10.5281/zenodo.22913943)**. Cite this version-specific DOI for the current manuscript; do not cite the older v1.0.0 DOI as its archive.
 
 Historical v1.0.0 archive: https://doi.org/10.5281/zenodo.22885339 (includes exploratory LME materials; not the current manuscript release).
 
-Zenodo concept DOI for all versions: https://doi.org/10.5281/zenodo.22885338 (will resolve to the latest version after archiving).
+Zenodo concept DOI for all versions: https://doi.org/10.5281/zenodo.22885338 (represents the version family).
 
-For manuscript-specific reproducibility, cite the **new v1.0.1 version DOI** once Zenodo assigns it. See `docs/DOI_AND_CITATION.md` and `docs/HISTORICAL_LME.md`.
+For manuscript-specific reproducibility, cite the **v1.0.1 version DOI [10.5281/zenodo.22913943](https://doi.org/10.5281/zenodo.22913943)**. See `docs/DOI_AND_CITATION.md` and `docs/HISTORICAL_LME.md`.
 
 ## License
 
@@ -338,7 +340,7 @@ https://github.com/aoigohma/correction-collar-optimization-reproducibility
 
 Current planned release: `v1.0.1` (no LME).
 
-Current v1.0.1 version-specific Zenodo DOI: **pending Zenodo archiving**.
+Current v1.0.1 version-specific Zenodo DOI: **[10.5281/zenodo.22913943](https://doi.org/10.5281/zenodo.22913943)**.
 
 Historical v1.0.0 DOI (not the current manuscript release):
 

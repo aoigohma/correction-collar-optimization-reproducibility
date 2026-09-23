@@ -14,6 +14,7 @@ authors:
   - family-names: "Monai"
     given-names: "Hiromu"
 version: "1.0.1"
+doi: "10.5281/zenodo.22913943"
 license: MIT
 repository-code: "https://github.com/aoigohma/correction-collar-optimization-reproducibility"
 keywords:
