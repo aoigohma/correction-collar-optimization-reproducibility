@@ -60,7 +60,7 @@ validate_against_verified
 - Fig.3のθrefだけは、1%・200 µmにおける最初のvalid **fitted optimum**を使い、boundary fallback前の値です。
 - DiffMADはsigned first differenceのMADです。Fig.4Dの|Δθopt|表示とは区別します。
 - 0%条件の3つの10点blockをまたぐ差分やlongest runは計算しません。
-- LMEはMLでfitし、0%をreference categoryにします。
+- 旧LMEはhistorical recordとしてのみ残し、現行No-LME論文の通常実行・検証から除外します。
 
 詳細は `ANALYSIS_DEFINITIONS.md` を参照してください。
 
@@ -150,3 +150,8 @@ Figure 1Cの代表蛍光画像は、このコンパクトな数値再現パッ�
 公開時にはGitHub URLとZenodo DOIをREADMEおよび`CITATION.cff`に追加します。論文DOIが確定した後は、論文を`preferred-citation`として`CITATION.cff`に追記する予定です。
 
 論文本文に記載するData and code availability文案は `docs/DATA_CODE_AVAILABILITY.md` にあります。
+
+
+## 現行No-LME原稿（v1.0.1）
+
+現行論文では探索的LME/LMMを報告しません。通常のFigure 4解析では`RunLME=false`であり、一括再現もLMEを実行しません。現行原稿の検証対象はLME関連の2ファイルを除く13項目です。旧解析のコード・CSV・Excelシートは履歴として保持しますが、現行論文の掲載解析ではありません。旧Zenodo v1.0.0 DOIを現行No-LME版のDOIとして引用しないでください。v1.0.1公開後に新しいversion DOIを反映します。元OIRファイルの存否は未確認であり、喪失したとは記載しません。

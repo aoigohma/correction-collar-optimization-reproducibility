@@ -7,7 +7,7 @@ The numerical reproduction and figure rendering are deliberately separated.
 - `run_all_reproductions` starts from the compact analysis-ready MAT datasets and recalculates derived variables and statistics.
 - `generate_all_main_figure_panels` reads the released source-data workbooks and renders the data-driven panels as SVG and PNG files.
 
-The figure-generation scripts do **not** rerun hypothesis tests or mixed-effects models. Statistical annotations are read from the released source-data records when they are displayed.
+The figure-generation scripts do **not** rerun hypothesis tests. Statistical annotations are read from the released source-data records when they are displayed.
 
 ## Run
 

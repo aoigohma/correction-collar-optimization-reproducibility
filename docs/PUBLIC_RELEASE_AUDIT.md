@@ -1,51 +1,68 @@
 # Public-release audit
 
 Audit date: 2026-09-22
-Target release: `v1.0.0`
 
-The repository was audited before the first public GitHub/Zenodo release.
+This audit was performed on the prepared `v0.3.0-draft` repository package before public release.
 
-## Completed checks
+## Findings
 
-- No GitHub tokens, API keys, passwords, or obvious credentials were found in the prepared text/code files.
-- No personal user-profile paths such as `C:\Users\...`, `/Users/...`, or `/home/...` were identified in the prepared public package.
-- No temporary/editor files such as `.asv`, `.autosave`, `.DS_Store`, `Thumbs.db`, `.tmp`, or `.bak` were intended for release.
-- The released Excel workbooks had no external-link parts, workbook connections, or hidden/veryHidden worksheets.
-- The six released `.xlsx` files were cleaned with Excel Document Inspector before the final private-repository commit.
-- The GitHub repository URL is fixed as `https://github.com/aoigohma/correction-collar-optimization-reproducibility`.
-- Numerical reproduction previously completed with 15/15 key comparisons passing and `MaxNumericAbsDiff = 0`.
-- Main-figure and Supplementary Figure S1–S6 panel-generation workflows were executed successfully and visually checked.
+### Passed checks
 
-## v1.0.0 preparation
+- No GitHub tokens, API keys, passwords, or obvious credentials were found in the text/code files scanned.
+- No personal user-profile paths such as `C:\Users\...`, `/Users/...`, or `/home/...` were found.
+- No temporary/editor files such as `.asv`, `.autosave`, `.DS_Store`, `Thumbs.db`, `.tmp`, or `.bak` were found in the prepared package.
+- The released Excel workbooks contained no external-link parts, workbook connections, or hidden/veryHidden worksheets.
+- The GitHub repository URL is now known and can be recorded directly in `CITATION.cff` and the Data and code availability text.
 
-The v1.0.0 replacement files set:
+### Items requiring action before public release
 
-- `VERSION` to `v1.0.0`;
-- `CITATION.cff` version to `1.0.0`;
-- `CITATION.cff` release date to `2026-09-22`;
-- retain the confirmed GitHub repository URL; and
-- initially left the Zenodo DOI absent until Zenodo archived the GitHub release.
+1. **Excel document-location metadata**
+   - All six released `.xlsx` files retained Excel document-location metadata (`x15ac:absPath`) pointing to the local manuscript/source-data folder.
+   - This does not alter the scientific data, but it exposes an unnecessary local filesystem path and should be removed before public release.
+   - On a copy of each workbook, use Excel: `File > Info > Check for Issues > Inspect Document` and remove **Document Properties and Personal Information**. Save, close Excel, and then use the cleaned file in the repository.
+   - After cleaning, reopen/inspect the public copy if desired, because Excel may add a document location again after a later save in a reopened workbook.
 
-If the actual public release date differs from 2026-09-22, update `date-released` in `CITATION.cff` and the version/date sentence in `README.md` before the GitHub release is created.
+2. **Draft/version metadata**
+   - Keep `v0.3.x-draft` while the repository is private.
+   - Immediately before the first public GitHub release, set `VERSION` to `v1.0.0` and `CITATION.cff` `version` to `1.0.0`.
 
-## Final actions before public visibility
+3. **Zenodo DOI placeholder**
+   - `[ZENODO DOI]` should remain until Zenodo assigns the DOI.
+   - Replace it in the manuscript-facing availability text and repository documentation after DOI assignment.
 
-1. Overlay the v1.0.0 replacement files onto the local GitHub clone.
-2. Run `update_manifest_sha256` after all final changes.
-3. Optionally rerun `validate_against_verified` for a final numerical sanity check.
-4. Commit and push the v1.0.0 preparation state while the repository is still private.
-5. Change repository visibility to Public.
-6. In Zenodo, run `Sync now`, enable the repository, and only then create the GitHub `v1.0.0` release.
-7. Confirm DOI assignment and update README/CITATION/manuscript metadata afterward.
+4. **SHA-256 manifest**
+   - The local public repository includes the released analysis-ready MAT files, whereas the earlier draft manifest was generated before those files were inserted into the local copy.
+   - Run `update_manifest_sha256` after all final file changes so the manifest includes the released MAT files and cleaned workbooks.
+
+5. **CITATION metadata**
+   - Confirm author order/names with coauthors.
+   - The GitHub URL can be entered now.
+   - Add `date-released` at the v1.0.0 release.
+   - Add the Zenodo DOI after archiving, and add the article as `preferred-citation` after article metadata are final.
+
+## Optional MATLAB check for released MAT files
+
+The two analysis-ready MAT files were already used successfully for end-to-end numerical reproduction. Before public release, the following commands can also be used to review their top-level contents:
+
+```matlab
+whos('-file','data/analysis_ready/Figure1_analysis_ready.mat')
+whos('-file','data/analysis_ready/Figures2to4_analysis_ready.mat')
+```
+
+The public release should contain only the intended compact analysis-ready structures/metadata, not raw microscopy images or unrelated workspace variables.
+
+## Final pre-public sequence
+
+1. Clean the six `.xlsx` files with Excel Document Inspector.
+2. Commit those cleaned workbooks to the private GitHub repository.
+3. Overlay the public-audit text/code patch.
+4. Rerun `run_all_reproductions` and `validate_against_verified` if any data workbook or analysis-ready MAT file itself was changed. Metadata-only Excel cleaning does not change the numerical data, but a final verification is still recommended.
+5. Run all main and supplementary figure generators once more if desired.
+6. Run `update_manifest_sha256`.
+7. Commit/push the final private state.
+8. Change version metadata to `v1.0.0` only when ready to make the first public release.
 
 
-## Post-archive DOI finalization
+## Final no-LME manuscript scope change (2026-09-23)
 
-The GitHub `v1.0.0` release was archived successfully by Zenodo on 2026-09-22.
-
-- Version-specific DOI: `10.5281/zenodo.22885339`
-- Concept DOI for all versions: `10.5281/zenodo.22885338`
-
-The version-specific DOI is used in `README.md`, `CITATION.cff`, and the manuscript Data and code availability statement so that the exact archived release supporting the manuscript can be identified.
-
-These DOI-finalization changes update the GitHub `main` branch after the immutable v1.0.0 archive was created; they do not alter the contents of the already archived Zenodo v1.0.0 snapshot.
+The final manuscript omits exploratory LME/LMM because a final audit found an unresolved issue. The underlying historical code and data are retained without claiming current-manuscript validation. v1.0.0 remains the historical Zenodo archive. A new v1.0.1 GitHub/Zenodo release is required for a manuscript-scope-aligned immutable archive; its DOI is assigned only after publication. Assertions that original OIR files have been lost are removed because their availability has not been confirmed.

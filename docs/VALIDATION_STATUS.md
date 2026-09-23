@@ -11,7 +11,7 @@ run_all_reproductions
 validate_against_verified
 ```
 
-Result on 2026-09-22: all 15 selected key-output comparisons reported `PASS`, with `MaxNumericAbsDiff = 0` for every comparison. These checks cover Figures 1–4, including the Figure 4 Spearman associations, W95 regression, adjusted-residual tests, LME coefficients, and LME model comparisons.
+Historical verification on 2026-09-22: all 15 then-selected comparisons reported `PASS`, with `MaxNumericAbsDiff = 0`; two compared files were exploratory LME outputs. These two historical files are **not part of the current manuscript**. For v1.0.1/no-LME, default validation compares **13 non-LME outputs**. The new 13/13 result has not yet been verified in MATLAB; update this statement only after a successful local run.
 
 ## Figure-generation validation
 
@@ -31,3 +31,8 @@ The main-figure and supplementary figure-generation scripts were also executed s
 `generate_all_supplementary_figure_panels` completed successfully for Supplementary Figures S1–S6, producing SVG and PNG outputs for each figure. The generated figures were visually checked during repository preparation.
 
 The figure-generation scripts should be interpreted as reproducible panel-level source artwork. Final multi-panel assembly, panel lettering, and conceptual artwork may be completed manually in Adobe Illustrator without altering the plotted numerical values.
+
+
+### v1.0.1 current-manuscript verification (pending local MATLAB run)
+
+The updated default validator compares **13** non-LME CSVs. The earlier 15/15 pass is a **historical result** and is not a verification of v1.0.1. Once the local no-LME code has been executed successfully, record the new result here. Historical LME statistics are not part of the manuscript.

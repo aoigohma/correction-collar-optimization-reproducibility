@@ -162,7 +162,9 @@ These 84 observations are repeated observations from seven experiments, not 84 i
 
 A pooled linear regression of DiffMAD on mean W95 is used to obtain W95-adjusted residuals. Residual depth comparisons are then performed within each isoflurane condition using Friedman tests with BH correction across the four conditions.
 
-## 13. Exploratory linear mixed-effects models
+## 13. Historical exploratory linear mixed-effects models — NOT part of the current manuscript
+
+This section documents an earlier exploratory analysis retained solely for provenance. The current manuscript excludes LME/LMM, the default reproduction does not run it, and the current-manuscript validation does not include its outputs. The description below is **not** a claim that the historical models have been fully audited for publication.
 
 Mouse/experiment is included as a random intercept. Imaging depth is coded as:
 

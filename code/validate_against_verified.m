@@ -22,6 +22,7 @@ repoRoot = setup_repository(repoRoot);
 p = inputParser;
 p.addParameter('Tolerance', 1e-10, @(x) isnumeric(x) && isscalar(x) && x >= 0);
 p.addParameter('ThrowOnFailure', true, @(x) islogical(x) && isscalar(x));
+p.addParameter('IncludeHistoricalLME', false, @(x) islogical(x) && isscalar(x));
 p.parse(varargin{:});
 opt = p.Results;
 
@@ -38,9 +39,15 @@ pairs = {
     'Figure4', 'Figure4_slope_summary.csv';
     'Figure4', 'Figure4_Spearman_overall.csv';
     'Figure4', 'Figure4_W95_regression.csv';
-    'Figure4', 'Figure4_stats_W95_adjusted_residual_depth_within_iso.csv';
-    'Figure4', 'Figure4_LME_coefficients.csv';
-    'Figure4', 'Figure4_LME_model_comparison.csv'};
+    'Figure4', 'Figure4_stats_W95_adjusted_residual_depth_within_iso.csv'};
+
+% Historical LME outputs are NOT part of the current manuscript validation.
+% Use a separately generated historical output directory before opting in.
+if opt.IncludeHistoricalLME
+    pairs = [pairs; { ...
+        'Figure4', 'Figure4_LME_coefficients.csv'; ...
+        'Figure4', 'Figure4_LME_model_comparison.csv'}];
+end
 
 rows = cell(size(pairs,1), 5);
 for i = 1:size(pairs,1)

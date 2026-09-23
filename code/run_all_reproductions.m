@@ -42,7 +42,7 @@ fprintf('\n=== Figure 3 ===\n');
 reproduce_Figure3_results(f234Data, fullfile(outRoot, 'Figure3'));
 
 fprintf('\n=== Figure 4 ===\n');
-reproduce_Figure4_results(f234Data, fullfile(outRoot, 'Figure4'));
+reproduce_Figure4_results(f234Data, fullfile(outRoot, 'Figure4'), 'RunLME', false); % current manuscript: no LME
 
 fprintf('\nAll numerical reproductions completed.\nOutput root: %s\n', outRoot);
 end

@@ -1,24 +1,11 @@
-# DOI and citation guidance
+# DOI and citation guidance for the no-LME manuscript
 
-## Archived release used for this manuscript
+**Current intended release:** GitHub `v1.0.1` — no-LME scope.
 
-Version: `v1.0.0`  
-Version-specific DOI: **10.5281/zenodo.22885339**  
-Persistent URL: https://doi.org/10.5281/zenodo.22885339
+**New v1.0.1 version-specific DOI:** `[PENDING — read from Zenodo only after the new GitHub release has been archived]`. Do not invent or pre-assign it.
 
-Use this DOI in the manuscript and when citing the exact reproducibility package used for the reported analyses.
+**Existing all-versions concept DOI:** https://doi.org/10.5281/zenodo.22885338. After the new release is archived this should resolve to the latest Zenodo record.
 
-## All versions
+**Historical v1.0.0 version-specific DOI:** https://doi.org/10.5281/zenodo.22885339. Its archive contains exploratory LME and must not be cited as the current no-LME package. Its archived files and DOI are not retroactively changed by edits to GitHub `main`.
 
-Zenodo concept DOI: **10.5281/zenodo.22885338**  
-Persistent URL: https://doi.org/10.5281/zenodo.22885338
-
-The concept DOI represents the software record across versions and resolves to the latest Zenodo version. It is useful for referring to the evolving repository as a whole, but the manuscript uses the version-specific DOI to identify the exact archived release.
-
-## Recommended software citation
-
-Gohma, A., Ue, Y., Miyawaki, A., & Monai, H. (2026). *Reproducibility package for image-based correction-collar optimization over time in in vivo two-photon microscopy* (Version v1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.22885339
-
-## GitHub repository
-
-https://github.com/aoigohma/correction-collar-optimization-reproducibility
+For the final manuscript, use the new v1.0.1 version-specific DOI after Zenodo assigns it. Update `CITATION.cff`, README, this document and the manuscript. The DOI may be added to GitHub `main` *after* archiving without changing the already archived tag.

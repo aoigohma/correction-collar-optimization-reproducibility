@@ -1,6 +1,6 @@
 # Output map
 
-This document maps the main reproduction outputs to the manuscript analyses.
+This document maps the main reproduction outputs to the **current no-LME manuscript**. Historical LME outputs are listed separately and are NOT manuscript results.
 
 ## Figure 1
 
@@ -66,10 +66,10 @@ Script: `reproduce_Figure4_results.m`
 | `Figure4_W95_regression.csv` | Pooled simple DiffMAD ~ mean W95 model |
 | `Figure4_W95_adjusted_residuals.csv` | Per-observation residuals |
 | `Figure4_stats_W95_adjusted_residual_depth_within_iso.csv` | Residual depth tests and BH q values |
-| `Figure4_LME_coefficients.csv` | Fixed-effect estimates for Models 1–3 |
-| `Figure4_LME_model_comparison.csv` | Two compact likelihood-ratio comparisons |
+| `Figure4_LME_coefficients.csv` | HISTORICAL ONLY; optional, not a current-manuscript result |
+| `Figure4_LME_model_comparison.csv` | HISTORICAL ONLY; optional, not a current-manuscript result |
 
-The compact LME comparison output has exactly two rows:
+The following historical output specification is retained for provenance only; it is **excluded from the current manuscript** and generated only with explicit `RunLME=true`. When produced, the historical compact LME comparison has exactly two rows:
 
 1. Model 1 vs Model 2
 2. Model 2 vs Model 3

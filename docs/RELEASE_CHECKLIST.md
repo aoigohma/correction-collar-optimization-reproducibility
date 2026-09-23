@@ -1,69 +1,16 @@
-# v1.0.0 public-release checklist
+# v1.0.1 release checklist — align with final no-LME manuscript
 
-This checklist is for the first public GitHub/Zenodo release.
-
-## Data and numerical reproduction
-
-- [ ] Confirm `Figure1_analysis_ready.mat` is present in `data/analysis_ready/`.
-- [ ] Confirm `Figures2to4_analysis_ready.mat` is present in `data/analysis_ready/`.
-- [ ] Confirm metadata CSVs correspond exactly to the released MAT files.
-- [ ] Run `setup_repository`.
-- [ ] Run `run_all_reproductions`.
-- [ ] Run `validate_against_verified` and confirm all 15 listed outputs report `PASS` with `MaxNumericAbsDiff = 0`.
-- [ ] Confirm `Figure4_LME_model_comparison.csv` contains exactly two likelihood-ratio comparison rows.
-- [ ] Confirm `experiment_id` terminology is used in public-facing tables and documentation.
-- [ ] Confirm the 0% condition is described as isoflurane-off, not as verified awake.
-
-## Figure-panel generation
-
-- [ ] Run `generate_all_main_figure_panels`.
-- [ ] Confirm Figure 1 D–H export successfully; confirm the Figure 1C metadata note is created. Figure 1A–B are conceptual Illustrator artwork and are intentionally not generated.
-- [ ] Confirm Figure 2 B–G export successfully. Figure 2A is conceptual Illustrator artwork.
-- [ ] Confirm Figure 3 B–G export successfully. Figure 3A is conceptual Illustrator artwork.
-- [ ] Confirm Figure 4 C–F export successfully. Figure 4A–B are conceptual Illustrator artwork.
-- [ ] Run `generate_all_supplementary_figure_panels`.
-- [ ] Confirm Supplementary Figures S1–S6 export successfully.
-- [ ] Confirm Figure 3D/G and Supplementary Figure S4 event-frequency panels use mouse-level **fractions**, not percent-scaled values.
-- [ ] Visually compare generated panels with the manuscript figures for axes, group ordering, representative experiment, thresholds, and legends.
-
-## Licensing and attribution
-
-- [ ] Confirm with the study authors/institution that the deposited research materials can be released under CC BY 4.0.
-- [ ] Confirm that the MATLAB source code can be released under the MIT License.
-- [ ] Confirm the author list/order in `CITATION.cff` with the coauthors.
-- [ ] Confirm no third-party material requiring a different license is included.
-
-## Repository hygiene
-
-- [ ] Confirm the six released `.xlsx` files were cleaned with Excel Document Inspector and no unnecessary local-folder metadata remains.
-- [ ] Confirm there are no credentials, personal information, private/raw acquisition files, or unrelated laboratory files.
-- [ ] Search for obsolete local Windows paths and unresolved placeholders other than the intentionally pending Zenodo DOI.
-- [ ] Run `update_manifest_sha256` after all final changes.
-- [ ] Confirm `MANIFEST_SHA256.txt` includes both released analysis-ready MAT files and the cleaned workbooks.
-
-## v1.0.0 metadata
-
-- [x] `VERSION` is `v1.0.0`.
-- [x] `CITATION.cff` version is `1.0.0`.
-- [x] `CITATION.cff` contains the GitHub repository URL.
-- [x] `CITATION.cff` contains `date-released: 2026-09-22`.
-- [ ] If the actual public release date differs from 2026-09-22, update `date-released` and the README before creating the release.
-- [x] Commit and push the v1.0.0 preparation changes while the repository is still private.
-- [x] Change the GitHub repository visibility from Private to Public.
-- [x] In Zenodo, run `Sync now`, enable `correction-collar-optimization-reproducibility`, and confirm the repository is enabled for archiving.
-- [x] On GitHub, create the `v1.0.0` release/tag only **after** Zenodo integration is enabled.
-- [x] Confirm that Zenodo archives the release and assigns DOI `10.5281/zenodo.22885339`.
-
-## After Zenodo assigns the DOI
-
-- [x] Add the Zenodo DOI to `README.md`.
-- [x] Add the Zenodo DOI to `CITATION.cff`.
-- [x] Insert the Zenodo DOI into `docs/DATA_CODE_AVAILABILITY.md`; insert the same DOI into the manuscript before submission.
-- [ ] Commit/push these DOI-finalization metadata updates.
-- [ ] If desired, create a small metadata-only patch release only when necessary; the archived v1.0.0 record itself remains the immutable first release.
-
-## After article acceptance/publication
-
-- [ ] Add the article as `preferred-citation` in `CITATION.cff`.
-- [ ] Add the final article citation and DOI to `README.md`.
-- [ ] Add the article DOI as a related identifier in Zenodo.
+- [ ] Confirm the current `README.md` explicitly excludes exploratory LME/LMM from the manuscript scope.
+- [ ] Confirm `reproduce_Figure4_results` defaults to `RunLME=false`.
+- [ ] Confirm `run_all_reproductions` explicitly passes `RunLME=false`.
+- [ ] On a **clean output directory**, run `setup_repository; run_all_reproductions; validate_against_verified`. Confirm **13/13 PASS**. Historical `fitlme` should not be called.
+- [ ] Confirm the two historical LME CSVs remain in `results/verified_key_outputs/` and historical Excel sheets are unchanged.
+- [ ] Confirm neither README nor Data and code availability claims original OIR acquisition files are lost or permanently unavailable.
+- [ ] Confirm two released analysis-ready MAT files and all six cleaned source-data Excel workbooks remain in the local GitHub clone. The downloadable patch deliberately does **not** replace them.
+- [ ] Run `update_manifest_sha256` in the actual local clone **after** all patch files and real data are in place.
+- [ ] Commit and push no-LME changes to `main`; verify README, VERSION and CITATION.cff in GitHub.
+- [ ] Keep GitHub/Zenodo historical v1.0.0 as an immutable historical version; update its Zenodo **description metadata** to clearly flag supersession if appropriate, without modifying its archived ZIP or DOI.
+- [ ] Keep Zenodo GitHub sync **ON**. Create a **new** GitHub tag/release `v1.0.1` from the verified `main`, with release notes explaining no-LME scope.
+- [ ] Confirm Zenodo created v1.0.1 under the existing version family/concept DOI and record the **new version-specific DOI**.
+- [ ] Update GitHub main README/CITATION and final manuscript availability statement to the new version DOI; do not move or rewrite the already published tag.
+- [ ] Provide the actual GitHub release and Zenodo record links to the supervisor for final confirmation.

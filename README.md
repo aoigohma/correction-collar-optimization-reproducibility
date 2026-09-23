@@ -1,14 +1,14 @@
 # Reproducibility package for image-based correction-collar optimization over time in in vivo two-photon microscopy
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22885339.svg)](https://doi.org/10.5281/zenodo.22885339)
+Historical v1.0.0 archive: [10.5281/zenodo.22885339](https://doi.org/10.5281/zenodo.22885339). **This archived version includes exploratory LME analysis and is not the current no-LME manuscript release.** The updated no-LME v1.0.1 archive will receive its own DOI after release.
 
 This repository contains the compact analysis-ready datasets, MATLAB code, released source-data workbooks, verified reference outputs, and figure-panel generation scripts associated with the manuscript:
 
 **Gohma A, Ue Y, Miyawaki A, Monai H. _Image-Based Correction-Collar Optimization over Time in In Vivo Two-Photon Microscopy._**
 
-Public repository release: **v1.0.0** (2026-09-22).
+Current manuscript scope: **v1.0.1 (no LME; release preparation)**. The earlier v1.0.0 release remains available solely as a historical record.
 
-The numerical workflow starts from **normalized measured image-score profiles at the sampled correction-collar angles** and recalculates the principal derived quantities and statistical results. It does not use previously calculated θopt, W95, relative fitted score, DiffMAD, or mixed-model outputs as numerical inputs.
+The numerical workflow starts from **normalized measured image-score profiles at the sampled correction-collar angles** and recalculates the principal derived quantities and statistical results. It does not use previously calculated θopt, W95, relative fitted score, or DiffMAD as numerical inputs.
 
 ## What this repository reproduces
 
@@ -22,8 +22,9 @@ The public workflow covers the numerical results underlying Figures 1–4 and th
 - DiffMAD from signed first differences of operational θopt;
 - Friedman tests, Wilcoxon signed-rank post-hoc tests, and Benjamini–Hochberg correction;
 - Spearman associations;
-- W95-adjusted residual analysis; and
-- exploratory linear mixed-effects models.
+- W95-adjusted residual analysis.
+
+**The current manuscript does not report linear mixed-effects models (LME/LMM).** Historical LME code and output files are retained for provenance only; they are excluded from the default reproduction, current-manuscript validation, and manuscript claims. The old LME has not been revalidated as part of this no-LME release.
 
 The repository also regenerates the **data-driven figure panels** for the main and supplementary figures. Conceptual artwork and final multi-panel composition were assembled separately in Adobe Illustrator and are intentionally kept separate from numerical reproduction.
 
@@ -96,7 +97,7 @@ The analyses were developed and verified using:
 - Statistics and Machine Learning Toolbox 24.2
 - Windows
 
-The Statistics and Machine Learning Toolbox is required for functions including `friedman`, `signrank`, `fitlme`, and mixed-model comparison.
+The Statistics and Machine Learning Toolbox is required for functions including `friedman` and `signrank`. `fitlme` is needed only if a user explicitly runs the historical, non-manuscript LME.
 
 ## Quick start: reproduce the numerical results
 
@@ -129,7 +130,7 @@ results/reproduced/Figure4
 validate_against_verified
 ```
 
-The verified repository workflow produced **15/15 PASS** with `MaxNumericAbsDiff = 0` for the selected key outputs listed in `docs/VALIDATION_STATUS.md`.
+The previous v1.0.0 workflow produced **15/15 PASS** for its then-selected reference outputs, including two historical LME files. The **current no-LME validation covers 13 selected comparisons**. Run `run_all_reproductions` followed by `validate_against_verified` in this release; record the new result in `docs/VALIDATION_STATUS.md` only after checking MATLAB output.
 
 ## Generate figure panels
 
@@ -148,7 +149,7 @@ generate_all_supplementary_figure_panels
 
 Generated SVG and PNG files are written below `results/figure_panels/`.
 
-The panel-generation scripts are intentionally **visualization-only** whenever possible: they read the released source-data workbooks and do not rerun the main hypothesis tests or mixed-effects models. This keeps numerical reproduction separate from presentation.
+The panel-generation scripts are intentionally **visualization-only** whenever possible: they read the released source-data workbooks and do not rerun the main hypothesis tests. This keeps numerical reproduction separate from presentation.
 
 ### Panels intentionally not regenerated
 
@@ -211,7 +212,7 @@ The shared implementation follows the manuscript definitions:
 - For Figure 3, θref is the first valid **fitted optimum** at 200 µm under 1% isoflurane, before operational boundary-angle substitution.
 - DiffMAD is the median absolute deviation of the **signed** first-difference series of operational θopt.
 - Under the 0% condition, the three noncontiguous 10-measurement blocks are treated as separate segments; first differences and consecutive-run calculations do not cross segment boundaries.
-- Mixed-effects models use maximum likelihood (`FitMethod = 'ML'`) and 0% isoflurane as the reference level.
+- Historical mixed-effects-model code is retained but is **not run by default** and is **not part of the current manuscript**.
 
 See `docs/ANALYSIS_DEFINITIONS.md` for full operational definitions.
 
@@ -271,7 +272,7 @@ Public-facing derived-variable terminology follows the manuscript, including:
 
 ## Raw images and acquisition files
 
-The compact reproduction package does not require the original TIFF or OIR files for any reported numerical analysis. The TIFF-converted images used for image analysis are available from the corresponding author upon reasonable request. The original OIR acquisition files are no longer available.
+The compact reproduction package does not require the original TIFF or OIR files for any reported numerical analysis. The TIFF-converted images used for image analysis are available from the corresponding author upon reasonable request. The original OIR files are not part of this compact deposit; their availability has not been established.
 
 Figure 1C requires representative fluorescence images. The released source-data workbook records the exact experiment, time points, and collar angles used for that panel, but the representative raw fluorescence-image assets themselves are not included in the compact repository.
 
@@ -279,21 +280,19 @@ Figure 1C requires representative fluorescence images. The released source-data 
 
 The Figure 1–4 numerical pipeline was first checked with standalone scripts and then refactored into shared functions. The refactored repository workflow was subsequently executed end-to-end and compared against selected verified reference outputs.
 
-At the time of repository preparation, `validate_against_verified` returned **PASS for all 15 listed comparisons with zero numerical difference**. Main-figure data-panel generators and Supplementary Figure S1–S6 generators were also executed successfully and visually checked.
+The earlier v1.0.0 workflow passed 15 selected comparisons, **including two historical LME outputs**. The present no-LME workflow has 13 default comparisons and requires a fresh MATLAB check before publishing v1.0.1. Main-figure data-panel generators and Supplementary Figure S1–S6 generators were executed successfully and visually checked during prior preparation.
 
 See `docs/VALIDATION_STATUS.md` for details.
 
 ## Citation
 
-A machine-readable citation file is provided as `CITATION.cff`. The development repository is `https://github.com/aoigohma/correction-collar-optimization-reproducibility`.
+`CITATION.cff` identifies the current no-LME version (v1.0.1). Its version-specific Zenodo DOI will be added **after** the v1.0.1 GitHub release is archived. Until then, do not cite the older v1.0.0 DOI as the archive for the final manuscript.
 
-For the first public release, cite the archived Zenodo record for version 1.0.0:
+Historical v1.0.0 archive: https://doi.org/10.5281/zenodo.22885339 (includes exploratory LME materials; not the current manuscript release).
 
-> Gohma, A., Ue, Y., Miyawaki, A., & Monai, H. (2026). *Reproducibility package for image-based correction-collar optimization over time in in vivo two-photon microscopy* (Version v1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.22885339
+Zenodo concept DOI for all versions: https://doi.org/10.5281/zenodo.22885338 (will resolve to the latest version after archiving).
 
-The version-specific DOI **10.5281/zenodo.22885339** identifies the archived v1.0.0 release used for this manuscript. Zenodo also provides the concept DOI **10.5281/zenodo.22885338** for citing all versions collectively. Once the associated article is published, please cite both the article and the archived repository release when the code or deposited data materially contribute to the work.
-
-The `CITATION.cff` file records the GitHub repository URL, version 1.0.0, release date, and version-specific Zenodo DOI. After the article is published, add the article as `preferred-citation`.
+For manuscript-specific reproducibility, cite the **new v1.0.1 version DOI** once Zenodo assigns it. See `docs/DOI_AND_CITATION.md` and `docs/HISTORICAL_LME.md`.
 
 ## License
 
@@ -306,7 +305,7 @@ Third-party software such as MATLAB is not redistributed or licensed by this rep
 
 ## Data and code availability
 
-The manuscript-ready wording is maintained in `docs/DATA_CODE_AVAILABILITY.md`. It contains the version-specific Zenodo DOI for the archived v1.0.0 release and the public GitHub repository URL.
+The manuscript-ready wording is maintained in `docs/DATA_CODE_AVAILABILITY.md`. It contains the public GitHub repository URL and a placeholder for the new no-LME v1.0.1 version-specific Zenodo DOI.
 
 ## MATLAB path troubleshooting
 
@@ -337,9 +336,11 @@ GitHub repository:
 https://github.com/aoigohma/correction-collar-optimization-reproducibility
 ```
 
-Release version: `v1.0.0`
+Current planned release: `v1.0.1` (no LME).
 
-Version-specific Zenodo DOI:
+Current v1.0.1 version-specific Zenodo DOI: **pending Zenodo archiving**.
+
+Historical v1.0.0 DOI (not the current manuscript release):
 
 ```text
 https://doi.org/10.5281/zenodo.22885339
